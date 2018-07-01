@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import { BrowserRouter, Route } from 'react-router-dom';
+import './App.css';
 
 import App from './components/app';
 import reducers from './reducers';
@@ -21,7 +22,7 @@ ReactDOM.render(
   <Provider store={createStoreWithMiddleware(reducers)}>
     <BrowserRouter>
       <div>
-        Header
+        <h1 className="header">Header</h1>
       <Route path="/hello" component={Hello} />
       <Route path="/goodbye" component={Goodbye} />
       </div>
