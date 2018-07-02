@@ -13,7 +13,7 @@ componentDidMount() {
 renderPosts() {
   return _.map(this.props.posts, post => {
     return (
-      <li key={post.id}>
+      <li className="list-group-item" key={post.id}>
         {post.title}
       </li>
     )
