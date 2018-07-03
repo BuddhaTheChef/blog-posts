@@ -12,25 +12,28 @@ renderField(field) {
         type="text"
         {...field.input}
       />
+      {field.meta.error}
     </div>
   )
 }
 
-renderTagsField() {
-
+onSubmit(values) {
+  console.log(values);
 }
 
   render() {
+    const { handleSubmit } = this.props;
+
     return (
-      <form>
+      <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
         <Field
           label="Title"
           name="title"
           component={this.renderField}
          />
          <Field
-           label="Tags"
-           name="tags"
+           label="Categories"
+           name="categories"
            component={this.renderField}
           />
           <Field
@@ -38,11 +41,31 @@ renderTagsField() {
             name="content"
             component={this.renderField}
            />
+           <button type="submit" className=" btn btn-primary">Submit</button>
       </form>
     )
   }
 }
 
+function validate(values) {
+  const errors = {};
+
+  if(!values.title || values.title.length < 3 ) {
+    errors.title = "Enter a Title at least 3 characters";
+  }
+
+  if(!values.categories) {
+    errors.categories = "Enter A Category";
+  }
+
+  if(!values.content) {
+    errors.content = "Enter A Description";
+  }
+
+  return errors;
+}
+
 export default reduxForm({
+  validate,
   form: 'PostsNewForm'
 })(PostsNew);
