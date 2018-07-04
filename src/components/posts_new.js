@@ -4,15 +4,20 @@ import { Field, reduxForm } from 'redux-form';
 class PostsNew extends Component {
 
 renderField(field) {
+  const { meta: { touched, error } } = field;
+  const className = `form-group ${touched && error ? 'has-error' : ''}`;
+
   return (
-    <div className="form-group">
+    <div className={className}>
       <label>{field.label}</label>
       <input
         className="form-control"
         type="text"
         {...field.input}
       />
-      {field.meta.error}
+      <div className="text-danger">
+      {touched ? error : ''}
+      </div>
     </div>
   )
 }
@@ -41,6 +46,11 @@ onSubmit(values) {
             name="content"
             component={this.renderField}
            />
+           <Field
+             label="Post Pics & Gifs"
+             name="media"
+             component={this.renderField}
+            />
            <button type="submit" className=" btn btn-primary">Submit</button>
       </form>
     )
@@ -60,6 +70,10 @@ function validate(values) {
 
   if(!values.content) {
     errors.content = "Enter A Description";
+  }
+
+  if(!values.media) {
+    errors.media = "Enter A Url or Upload";
   }
 
   return errors;
