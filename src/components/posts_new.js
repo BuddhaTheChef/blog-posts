@@ -9,18 +9,28 @@ class PostsNew extends Component {
 renderField(field) {
   const { meta: { touched, error } } = field;
   const className = `form-group ${touched && error ? 'has-error' : ''}`;
-
   return (
     <div className={className}>
       <label>{field.label}</label>
       <input
         className="form-control"
-        type="text"
         {...field.input}
       />
       <div className="text-danger">
       {touched ? error : ''}
       </div>
+    </div>
+  )
+}
+
+renderMedia(field) {
+  return (
+    <div>
+      <label>{field.label}</label>
+      <input
+        type="file"
+        {...field.input}
+      />
     </div>
   )
 }
@@ -33,7 +43,7 @@ onSubmit(values) {
 
   render() {
     const { handleSubmit } = this.props;
-  
+
     return (
       <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
         <Field
@@ -42,20 +52,15 @@ onSubmit(values) {
           component={this.renderField}
          />
          <Field
-           label="Categories"
+           label="Content"
            name="categories"
            component={this.renderField}
           />
-          <Field
-            label="Post Content"
-            name="content"
-            component={this.renderField}
-           />
-           <Field
-             label="Post Media"
-             name="pics"
-             component={this.renderField}
-            />
+        <Field
+          label="Enter a Url"
+          name="content"
+          component={this.renderField}
+          />
            <button type="submit" className="btn btn-primary">Submit</button>
            <Link to="/" className="btn btn-danger cancel-btn">Cancel</Link>
       </form>
@@ -71,15 +76,11 @@ function validate(values) {
   }
 
   if(!values.categories) {
-    errors.categories = "Enter A Category";
+    errors.categories = "Enter A Description";
   }
 
   if(!values.content) {
-    errors.content = "Enter A Description";
-  }
-
-  if(!values.pics) {
-    errors.pics = "Enter A Url or Upload";
+    errors.content = "Enter A Url or Upload";
   }
 
   return errors;

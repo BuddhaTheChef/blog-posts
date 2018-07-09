@@ -24,8 +24,8 @@ class PostsShow extends Component {
       <div>
         <Link to="/">Home</Link>
         <h3>{post.title}</h3>
-        <h5>Category: {post.categories}</h5>
-        <p>{post.content}</p>
+        <img src={post.content} alt="Media not displayed"/>
+        <h5>Description: {post.categories}</h5>
       </div>
     )
   }
