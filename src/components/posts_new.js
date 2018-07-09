@@ -33,7 +33,7 @@ onSubmit(values) {
 
   render() {
     const { handleSubmit } = this.props;
-
+  
     return (
       <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
         <Field
@@ -52,11 +52,11 @@ onSubmit(values) {
             component={this.renderField}
            />
            <Field
-             label="Post Pics & Gifs"
-             name="media"
+             label="Post Media"
+             name="pics"
              component={this.renderField}
             />
-           <button type="submit" className=" btn btn-primary">Submit</button>
+           <button type="submit" className="btn btn-primary">Submit</button>
            <Link to="/" className="btn btn-danger cancel-btn">Cancel</Link>
       </form>
     )
@@ -78,8 +78,8 @@ function validate(values) {
     errors.content = "Enter A Description";
   }
 
-  if(!values.media) {
-    errors.media = "Enter A Url or Upload";
+  if(!values.pics) {
+    errors.pics = "Enter A Url or Upload";
   }
 
   return errors;
