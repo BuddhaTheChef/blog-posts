@@ -45,6 +45,8 @@ onSubmit(values) {
     const { handleSubmit } = this.props;
 
     return (
+      <div>
+        <h1>Create a Gif or Pic </h1>
       <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
         <Field
           label="Title"
@@ -64,6 +66,7 @@ onSubmit(values) {
            <button type="submit" className="btn btn-primary">Submit</button>
            <Link to="/" className="btn btn-danger cancel-btn">Cancel</Link>
       </form>
+    </div>
     )
   }
 }
