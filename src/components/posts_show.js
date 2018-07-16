@@ -32,10 +32,6 @@ class PostsShow extends Component {
 
         <h3 className="post-title">{post.title}</h3>
 
-        <div className="home-buttons">
-          <Link className="btn btn-primary home" to="/">Home</Link>
-        </div>
-
         <div className="post-contents">
         <div className="post-div-media">
           <img className="post-media" src={post.content} alt="Media not displayed" />
@@ -51,6 +47,9 @@ class PostsShow extends Component {
         >
           Delete Post
         </button>
+      </div>
+      <div className="home-buttons">
+        <Link className="btn btn-primary home" to="/">Home</Link>
       </div>
       </div>
     )

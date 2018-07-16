@@ -23,7 +23,12 @@ renderPosts() {
   render() {
     return (
       <div>
-        <h1 className="main-title">Meme Definer</h1>
+        <div className="main-out-div">
+          <div className="overlay">
+          <h1 className="main-title">What Do You Meme?</h1>
+        </div>
+        </div>
+        <div className="main-bot-half">
         <div className="main-button-sub-head">
         <h3 className="sub-title">Posts</h3>
         <Link className="btn btn-primary add-post-button" to="/posts/new">Add A Post!</Link>
@@ -31,6 +36,7 @@ renderPosts() {
         <ul>
           {this.renderPosts()}
         </ul>
+      </div>
       </div>
     )
   }
