@@ -29,14 +29,13 @@ class PostsShow extends Component {
     console.log(post)
     return(
       <div className="post-show-main">
-        <Link to="/">Home</Link>
-        <button
-          className="btn btn-danger pull-xs-right"
-          onClick={this.onDeleteClick.bind(this)}
-        >
-          Delete Post
-        </button>
+
         <h3 className="post-title">{post.title}</h3>
+
+        <div className="home-buttons">
+          <Link className="btn btn-primary home" to="/">Home</Link>
+        </div>
+
         <div className="post-contents">
         <div className="post-div-media">
           <img className="post-media" src={post.content} alt="Media not displayed" />
@@ -45,6 +44,14 @@ class PostsShow extends Component {
             <h4 className="post-words"><span className="post-description-title">Description: </span> {post.categories}</h4>
           </div>
         </div>
+        <div className="delete-button-div">
+        <button
+          className="btn btn-danger delete-button"
+          onClick={this.onDeleteClick.bind(this)}
+        >
+          Delete Post
+        </button>
+      </div>
       </div>
     )
   }
