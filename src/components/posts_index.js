@@ -13,7 +13,7 @@ componentDidMount() {
 renderPosts() {
   return _.map(this.props.posts, post => {
     return (
-      <li className="list-group-item" key={post.id}>
+      <li className="list-group-item main-post-list" key={post.id}>
         <Link to={`/posts/${post.id}`}>{post.title}</Link>
       </li>
     )
@@ -23,10 +23,11 @@ renderPosts() {
   render() {
     return (
       <div>
-        <div>
-          <Link className="btn btn-primary" to="/posts/new">Add A Post!</Link>
-        </div>
-        <h3>Posts</h3>
+        <h1 className="main-title">Meme Definer</h1>
+        <div className="main-button-sub-head">
+        <h3 className="sub-title">Posts</h3>
+        <Link className="btn btn-primary add-post-button" to="/posts/new">Add A Post!</Link>
+      </div>
         <ul>
           {this.renderPosts()}
         </ul>

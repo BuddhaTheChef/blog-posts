@@ -105,3 +105,35 @@ html, body {
 }
 
 /* ////////////////////////////////////////////////////////////////////////// */
+/* Main Posts page */
+.main-title {
+  text-align: center;
+  color: whitesmoke;
+  font-size: 60px;
+  margin-right: -46px;
+  margin-top: 50px;
+  margin-bottom: 40px;
+}
+
+.sub-title {
+  margin-left: 44px;
+  margin-top: 8px;
+  font-size: 30px;
+  color: whitesmoke;
+}
+
+.main-button-sub-head {
+  display: flex;
+  justify-content: space-between;
+}
+
+.add-post-button {
+  margin-bottom: 22px;
+}
+
+.main-post-list {
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  border-radius: 7px;
+}
