@@ -28,7 +28,7 @@ class PostsShow extends Component {
 
     console.log(post)
     return(
-      <div>
+      <div className="post-show-main">
         <Link to="/">Home</Link>
         <button
           className="btn btn-danger pull-xs-right"
@@ -36,9 +36,15 @@ class PostsShow extends Component {
         >
           Delete Post
         </button>
-        <h3>{post.title}</h3>
-        <img src={post.content} alt="Media not displayed"/>
-        <h5>Description: {post.categories}</h5>
+        <h3 className="post-title">{post.title}</h3>
+        <div className="post-contents">
+        <div className="post-div-media">
+          <img className="post-media" src={post.content} alt="Media not displayed" />
+        </div>
+          <div className="post-description">
+            <h4 className="post-words"><span className="post-description-title">Description: </span> {post.categories}</h4>
+          </div>
+        </div>
       </div>
     )
   }
