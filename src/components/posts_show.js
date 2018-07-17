@@ -36,21 +36,25 @@ class PostsShow extends Component {
         <div className="post-div-media">
           <img className="post-media" src={post.content} alt="Media not displayed" />
         </div>
+
+        <div className="post-right-div">
+          <div className="post-home-button">
+            <Link className="btn btn-primary home" to="/">Home</Link>
+          </div>
+          <div className="delete-div-button">
+          <button
+            className="btn btn-danger delete"
+            onClick={this.onDeleteClick.bind(this)}
+          >
+            Delete Post
+          </button>
+        </div>
           <div className="post-description">
             <h4 className="post-words"><span className="post-description-title">Description: </span> {post.categories}</h4>
           </div>
         </div>
-        <div className="delete-button-div">
-        <button
-          className="btn btn-danger delete-button"
-          onClick={this.onDeleteClick.bind(this)}
-        >
-          Delete Post
-        </button>
-      </div>
-      <div className="home-buttons">
-        <Link className="btn btn-primary home" to="/">Home</Link>
-      </div>
+        </div>
+
       </div>
     )
   }
