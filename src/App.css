@@ -24,12 +24,13 @@ html, body {
 }
 
 .post-title {
-  font-size: 3em;
+  font-size: 5em;
   width: 65%;
   color: whitesmoke;
   text-align: center;
   margin-bottom: 60px;
   text-shadow: 0 0 3px #000000, 0 0 5px #000000;
+  font-family: 'Libre Barcode 39 Text', cursive;
 }
 
 .post-contents {
@@ -153,10 +154,11 @@ ul {
   text-align: center;
   color: white;
   z-index: 100;
-  font-size: 60px;
+  font-size: 90px;
   margin-top: 60px;
   margin-bottom: 40px;
   text-shadow: 0 0 3px #000000, 0 0 5px #000000;
+  font-family: 'Libre Barcode 39 Text', cursive;
 }
 
 .main-bot-half {
@@ -186,11 +188,12 @@ ul {
 }
 
 .main-post-list {
-  font-size: 20px;
+  font-size: 39px;
   margin-top: 30px;
   margin-bottom: 0px;
   border-radius: 7px;
   box-shadow: 0px 13px 34px 4px rgba(0,0,0,.6);
+  font-family: 'Libre Barcode 39 Text', cursive;
 }
 
 /* //////////////////Form Page/////////////////////////////////////////// */
