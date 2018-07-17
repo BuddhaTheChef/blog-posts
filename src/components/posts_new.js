@@ -45,8 +45,8 @@ onSubmit(values) {
     const { handleSubmit } = this.props;
 
     return (
-      <div>
-        <h1>Create a Gif or Pic </h1>
+      <div className="main-form-div">
+        <h1 className="form-title">Create a Gif or Pic </h1>
       <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
         <Field
           label="Title"
