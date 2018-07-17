@@ -204,6 +204,8 @@ ul {
 
 .form-title {
   color: whitesmoke;
+  font-size: 70px;
+  font-family: 'Libre Barcode 39 Text', cursive;
 }
 
 label {
