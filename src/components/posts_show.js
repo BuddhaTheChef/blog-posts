@@ -10,6 +10,7 @@ class PostsShow extends Component {
       const { id } = this.props.match.params;
       this.props.fetchPost(id);
     }
+    window.scrollTo(0, 0)
   }
 
   onDeleteClick() {

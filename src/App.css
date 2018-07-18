@@ -215,6 +215,7 @@ margin-top: 3%;
   color: whitesmoke;
   font-size: 70px;
   font-family: 'Libre Barcode 39 Text', cursive;
+  text-shadow: 0 0 3px #000000, 0 0 5px #000000;
 }
 
 .sub-form {
