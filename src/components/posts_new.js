@@ -11,9 +11,9 @@ renderField(field) {
   const className = `form-group ${touched && error ? 'has-error' : ''}`;
   return (
     <div className={className}>
-      <label>{field.label}</label>
+      <label className="form-headers">{field.label}</label>
       <input
-        className="form-control"
+        className="form-control form-inputs"
         {...field.input}
       />
       <div className="text-danger">
@@ -47,8 +47,9 @@ onSubmit(values) {
     return (
       <div className="main-form-div">
         <h1 className="form-title">Create a Gif or Pic </h1>
-      <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
+      <form className="sub-form" onSubmit={handleSubmit(this.onSubmit.bind(this))}>
         <Field
+          className="form-title-input"
           label="Title"
           name="title"
           component={this.renderField}
@@ -63,7 +64,7 @@ onSubmit(values) {
           name="content"
           component={this.renderField}
           />
-           <button type="submit" className="btn btn-primary">Submit</button>
+           <button type="submit" className="btn btn-primary button-submit-form">Submit</button>
            <Link to="/" className="btn btn-danger cancel-btn">Cancel</Link>
       </form>
     </div>

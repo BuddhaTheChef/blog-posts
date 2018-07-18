@@ -25,7 +25,7 @@ renderPosts() {
       <div>
         <div className="main-out-div">
           <div className="overlay">
-          <h1 className="main-title">What Do You Meme?</h1>
+          <h1 className="main-title">? What Do You Meme?</h1>
         </div>
         </div>
         <div className="main-bot-half">

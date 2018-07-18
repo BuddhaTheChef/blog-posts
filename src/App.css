@@ -49,7 +49,7 @@ html, body {
 }
 
 .post-description {
-  height: 430px;
+  height: 425px;
   margin-top: 20px;
   padding: 10px 30px 25px 35px;
   border: solid black 2px;
@@ -87,6 +87,7 @@ html, body {
   width: 100%;
   margin-top: 2px;
   box-shadow: 0px 13px 34px 4px rgba(0,0,0,.6);
+  border: solid black 1px;
 }
 
 .home {
@@ -99,6 +100,7 @@ html, body {
   width: 100%;
   margin-top: 20px;
   box-shadow: 0px 13px 34px 4px rgba(0,0,0,.6);
+  border: solid black 1px;
 }
 
 .delete {
@@ -185,6 +187,7 @@ ul {
   font-size: 20px;
   margin-bottom: 21px;
   text-shadow: 0 0 3px #000000, 0 0 5px #000000;
+  border: solid black 1px;
 }
 
 .main-post-list {
@@ -199,7 +202,13 @@ ul {
 /* //////////////////Form Page/////////////////////////////////////////// */
 
 .main-form-div {
-
+display: flex;
+justify-content: center;
+flex-direction: column;
+align-items: center;
+width: 55%;
+margin-left: 22%;
+margin-top: 3%;
 }
 
 .form-title {
@@ -208,7 +217,46 @@ ul {
   font-family: 'Libre Barcode 39 Text', cursive;
 }
 
+.sub-form {
+  background-color: grey;
+  border: solid black 1px;
+  margin-top: 5%;
+  border-radius: 7px;
+  width: 75%;
+  padding: 20px 20px 20px 20px;
+  box-shadow: 0px 13px 34px 4px rgba(0,0,0,.6);
+}
+
+.input-form {
+  width: 80%;
+}
+
+.form-headers {
+  margin-left: 9%;
+}
+
+.form-inputs {
+  width: 80%;
+  margin-left: 9%;
+  box-shadow: 0px 13px 34px 4px rgba(0,0,0,.2);
+  border: solid black 1px;
+}
+
 label {
   color: whitesmoke;
   font-size: 23px;
+  text-shadow: 0 0 3px #000000, 0 0 5px #000000;
+}
+
+.button-submit-form {
+  margin-left: 9%;
+  margin-top: 2%;
+  text-shadow: 0 0 3px #000000, 0 0 5px #000000;
+  border: solid black 1px;
+}
+
+.cancel-btn {
+  margin-top: 2%;
+  text-shadow: 0 0 3px #000000, 0 0 5px #000000;
+  border: solid black 1px;
 }
